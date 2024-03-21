@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr-Ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Relève numérique</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/releve_numerique.css">
+    <link rel="stylesheet" type="text/css" href="/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/releve_numerique.css">
+	<link rel="icon" href="/public/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <link rel="icon" href="/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <title>Relève numérique</title>
+</head>
+<body>
+    <div class="button_light_dark">
+        <button id="btn-switch" class="btn-switch">
+          <span class="light">Light</span>
+          <span class="dark">Dark</span>
+        </button>
+        </div>
+<form action="submit.php" method="post" id="myForm">
+    <fieldset>
+    <h2 id="etape_2">Étape 2 - Plages horaires</h2>
+    <p>Nous avons besoin de connaître les heures exactes de début et de fin pour chacune des périodes de cours d'une journée type.
+        Merci de les indiquer ci-dessous.</p>
+    <p>Les heures doivent être saisies au format HH:MM</p>
+
+  
+
+    <div id="nb_periode"></div>
+
+    
+
+    
+ </form>
+ <p>Formulaire incomplet, veuillez compléter les informations demandées.</p>
+ <form id="myForm">
+    
+    <div id="buttonContainer">
+        <button type="button" onclick="previewsStep(nextBtnL)" id="nextBtnL">Previous</button>
+        <button type="button" onclick="nextStep(nextBtnR)" id="nextBtnR">Next</button>
+    </div>
+   </fieldset> 
+    </form>
+
+    <script src="/js/button_light_dark.js"> </script>
+    <script src="/js/function.js"></script> 
+    <script src="/public/js/button_light_dark.js"> </script>
+    <script src="/public/js/function.js"></script> 
+ </body>
+</html>

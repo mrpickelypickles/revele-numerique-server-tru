@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr-Ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Relève numérique</title>
+    <link rel="stylesheet" type="text/css" href="/public/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/releve_numerique.css">
+    <link rel="stylesheet" type="text/css" href="/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/releve_numerique.css">
+	<link rel="icon" href="/public/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <link rel="icon" href="/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <title>Relève numérique</title>
+</head>
+
+<body>
+    <fieldset>
+        <div class="button_light_dark">
+            <button id="btn-switch" class="btn-switch">
+              <span class="light">Light</span>
+              <span class="dark">Dark</span>
+            </button>
+            </div>
+       <form action="submit.php" method="post" id="myForm"></form> 
+    <div id="addEntryForm2" onsubmit="addEntry2()">
+        <h2 id="etape_4">Étape 4 - Choix des activités</h2>
+        <p>Le nom de l'activité et le nom de l'enseignant.e doivent être sélectionnés à partir du menu déroulant.</p> 
+           <p>La date doit être choisie à partir de l'interface calendrier.</p>
+           <p>Une information inscrite manuellement risque de rendre le formulaire inopérant. N'hésitez pas à contacter Cybercap pour obtenir de l'assistance.</p>
+        <p>Les dates doivent être saisies au format AAAA-MM-JJ</p>
+        <h3>Étape 4a - Choix des 3 séances d'information</h3>
+        <table id="choix_des_3_seances_d_information">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Séance</th>
+                    <th>Enseignant.e</th>
+                    <th>Numéro de groupe</th>
+                    <th>Nombre d'élèves</th>
+                    <th>Niveau</th>
+                    <th>Local</th>
+                    <th>Date</th>
+                    <th>Période</th>
+                    <th>Disponibilité</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button type="button" id="addEntry2">Add Entry</button>
+     </div>
+
+     <div id="addEntryForm4" onsubmit="addEntry3()"> <!-- repeat n# time to match wit the -->
+        <h3>Étape 4b - Choix des ateliers de sensibilisation</h3>
+        <table id="choix_des_6_ateliers">
+            <thead>
+                <tr> <!-- repeat only onetime before break-->
+                    <th>ID</th> 
+                    <th>Atelier</th>
+                    <th>Enseignant.e</th>
+                    <th>Numéro de groupe</th>
+                    <th>Nombre d'élèves</th>
+                    <th>Niveau</th>
+                    <th>Local</th>
+                    <br> <!-- repeat n# time after break in fonction of cours-->
+                    <th>Date</th>
+                    <th>Période</th>
+                    <th>Disponibilité</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <button type="button" id="addEntry3">Add Entry</button>
+    </div>
+    
+     <div id="addEntryForm4" onsubmit="addEntry4()"> <!-- repeat n# time to match wit the -->
+        <h3>Étape 4c - Choix des 4 ateliers de création</h3>
+        <table id="choix_des_6_ateliers_creation">
+            <thead>
+                <tr> <!-- repeat only onetime before break-->
+                  <th>ID</th> 
+                  <th>Atelier</th>
+                  <th>Enseignant.e</th>
+                  <th>Numéro de groupe</th>
+                  <th>Nombre d'élèves</th>
+                  <th>Niveau</th>
+                  <th>Local</th>
+                  <br> <!-- repeat n# time after break in fonction of cours-->
+                  <th>Date</th>
+                  <th>Période</th>
+                  <th>Disponibilité</th>
+    
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <button type="button" id="addEntry4">Add Entry</button>
+    </div>
+
+
+    <p>Formulaire incomplet, veuillez compléter les informations demandées.</p>
+    
+        
+        <button type="button" onclick="previewsStep(nextBtn2)" id="nextBtn2">Previous</button>
+       <button type="submit">Envoyer le formulaire</button>
+    </form>
+</fieldset>
+    <script src="/js/button_light_dark.js"> </script>
+    <script src="/js/function.js"></script> 
+    <script src="/public/js/button_light_dark.js"> </script>
+    <script src="/public/js/function.js"></script> 
+</body>
+</html>
