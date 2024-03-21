@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr-Ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Relève numérique</title>
+    
+    <link rel="stylesheet" type="text/css" href="/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/releve_numerique.css">
+	
+    <link rel="icon" href="/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <title>Relève numérique</title>
+</head>
+
+<body>
+  <div class="button_light_dark">
+    <button id="btn-switch" class="btn-switch">
+      <span class="light">Light</span>
+      <span class="dark">Dark</span>
+    </button>
+    </div>
+  <fieldset id="addEntryForm1" onsubmit="addEntry()">
+    <form action="submit.php" method="post" id="myForm">
+
+        <h2 id="etape_3">Étape 3 - Enseignant.e.s impliqué.e.s</h2>
+        <p>Nos activités sont réalisées en collaboration avec une enseignante ou un enseignant. Merci de saisir leurs coordonnées ci-dessous.</p>
+        <p>Ces informations ré-apparaîtront à l'étape suivante pour pouvoir assigner une ou un prof à l'activité désirée.</p>
+    
+        <style>
+            .case {
+              margin-bottom: 10px;
+              position: relative;
+            }
+          
+            input + span, select + span {
+              padding-right: 30px;
+            }
+          
+            input:invalid + span::after, select:invalid + span::after {
+              position: absolute;
+              content: "✖";
+              padding-left: 5px;
+            }
+          
+            input:valid + span::after, select:valid + span::after {
+              position: absolute;
+              content: "✓";
+              padding-left: 5px;
+            }
+          </style>
+          
+          <table id="entryTable">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Name<span></span></th>
+                <th>Subject<span></span></th>
+                <th>Email<span></span></th>
+                <th>Main Phone<span></span></th>
+                <th>Secondary Phone<span></span></th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+          
+          <button type="button" id="addEntry">Add Entry</button>
+    
+
+
+    <p>Formulaire incomplet, veuillez compléter les informations demandées.</p>
+    
+    <button type="button" onclick="previewsStep(nextBtnL)" id="nextBtnL">Previous</button>
+    <button type="button" onclick="nextStep(nextBtnR)" id="nextBtnR">Next</button>
+    </form>
+</fieldset>
+
+    <script src="/js/button_light_dark.js"> </script>
+    <script src="/js/function.js"></script> 
+    
+</body>
+</html>

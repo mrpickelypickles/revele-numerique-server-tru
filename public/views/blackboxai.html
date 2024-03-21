@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Case Input Form</title>
+</head>
+<body>
+  <table id="data-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Subject</th>
+        <th>Email</th>
+        <th>Main Phone</th>
+        <th>Secondary Phone</th>
+      </tr>
+    </thead>
+    <tbody id="data-body"></tbody>
+  </table>
+  
+  <input type="text" id="add-entry-input" placeholder="Enter new entry...">
+  <button onclick="addEntry()">Add Entry</button>
+  
+  <style>
+    .case {
+      margin-bottom: 10px;
+      position: relative;
+    }
+  
+    input + span {
+      padding-right: 30px;
+    }
+  
+    input:invalid + span::after {
+      position: absolute;
+      content: "✖";
+      padding-left: 5px;
+    }
+  
+    input:valid + span::after {
+      position: absolute;
+      content: "✓";
+      padding-left: 5px;
+    }
+  </style>
+  
+  <script>
+    // Clear the existing rows in the table body
+    document.getElementById("data-body").innerHTML = "";
+  
+    // Define the data array
+    const data = [
+      {
+        "Name": "John Doe",
+        "Subject": "Math",
+        "Email": "john.doe@example.com",
+        "Main Phone": "123-456-7890",
+        "Secondary Phone": "098-765-4321"
+      }
+    ];
+  
+  // Function to add a new entry to the data array
+function addEntry() {
+  const entry = {};
+  const input = document.getElementById("add-entry-input");
+  data.push(entry);
+  input.value = ""; // Clear the input field
+  input.placeholder = ""; // Remove the placeholder text
+  renderTable();
+}
+
+// Function to render the table
+function renderTable() {
+  data.forEach((entry, index) => {
+    // Create a new row for each entry
+    const row = document.createElement("tr");
+    row.dataset.index = entry.index;
+    row.id = `entry-${entry.index}`;
+    // Add cells for each property in the entry
+    Object.entries(entry).forEach(([key, value]) => {
+      const cell = document.createElement("td");
+      const input = document.createElement("input");
+      input.type = "text";
+      input.name = key;
+      input.value = value;
+      input.required = true;
+      cell.appendChild(input);
+      const span = document.createElement("span");
+      cell.appendChild(span);
+      row.appendChild(cell);
+    });
+    // Add the row to the table body
+    document.getElementById("data-body").appendChild(row);
+  });
+}
+  
+    // Render the table initially
+    renderTable();
+  </script>
+      <script src="/public/js/blaxboxtest.js"> </script>
+</body>
+</html>

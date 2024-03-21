@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relève Numérique Form</title>
+</head>
+<body>
+    <!-- Form will be added here -->
+    <form action="submit.php" method="post">
+        <fieldset>
+            <legend>Étape 1 - Informations générales</legend>
+            <p>
+                <label for="region">Votre région administrative:</label>
+                <input type="text" id="region" name="region" required>
+            </p>
+            <!-- Add more form fields here -->
+        </fieldset>
+        <fieldset>
+            <legend>Étape 2 - Plages horaires</legend>
+            <p>
+                <label for="period1_start">Période 1 Heure de DÉBUT:</label>
+                <input type="time" id="period1_start" name="period1_start" required>
+            </p>
+            <!-- Add more form fields here -->
+        </fieldset>
+        <fieldset>
+            <legend>Étape 3 - Enseignant.e.s impliqué.e.s</legend>
+            <p>
+                <label for="teacher_name">Prénom et nom:</label>
+                <input type="text" id="teacher_name" name="teacher_name" required>
+            </p>
+            <!-- Add more form fields here -->
+        </fieldset>
+        <fieldset>
+            <legend>Étape 4 - Choix des activités</legend>
+            <legend>Étape 4a - Choix des 3 séances d'information</legend>
+            <p>
+                <label for="session1_teacher">Séance:</label>
+                <select id="session1_teacher" name="session1_teacher" required>
+                    <option value="">Choisir une séance</option>
+                    <!-- Add options here -->
+                </select>
+            </p>
+            <!-- Add more form fields here -->
+        </fieldset>
+        <button type="submit">Envoyer le formulaire</button>
+    </form>
+</body>
+</html>
