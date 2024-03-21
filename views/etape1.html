@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr-Ca">
+<head>
+    <meta charset="UTF-8">
+    <title>Relève numérique</title>
+    <!---  
+    <link rel="stylesheet" type="text/css" href="/public/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/releve_numerique.css">
+    <link rel="icon" href="/public/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">-->
+
+    <link rel="stylesheet" type="text/css" href="/css/button_light_dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/releve_numerique.css">
+    <link rel="icon" href="/blob_https___docs.google.com_e1a6744e-35f9-4817-a67d-8f533779eee2.png">
+    <title>Relève numérique</title>
+</head>
+<body>
+    <div class="button_light_dark">
+        <button id="btn-switch" class="btn-switch">
+          <span class="light">Light</span>
+          <span class="dark">Dark</span>
+        </button>
+        </div>
+
+<form action="submit.php" method="post" id="myForm">
+    
+    <fieldset> 
+      <h2 id="etape_1">Étape 1 -information générales</h2>
+    <ul>
+        <ol class="centerbaseline"><label for="region" class="bolt">Votre région administrative:</label><br></ol> <!--will see-->
+        <ol class="centerbaseline"><label></label>
+        <select id="region" name="region"class="auto-fit-impot" required>
+            <option value="">Choisir une séance</option>
+            <option value="Bas-Saint-Laurent">Bas-Saint-Laurent</option>
+            <option value="Capitale-Nationale">Capitale-Nationale</option>
+            <option value="Centre-du-Québec">Centre-du-Québec</option>
+            <option value="Chaudière-Appalaches">Chaudière-Appalaches</option>
+            <option value="Estrie">Estrie</option>
+            <option value="Laval">Laval</option>
+            <option value="Montréal">Montréal</option>
+            <option value="Montérégie">Montérégie</option>
+            <option value="userwirteregion">write ur region</option>
+        </select>
+
+        <ol class="centerbaseline"><label for="center" class="bolt">Votre centre de services scolaire:</label><br> <!-- may change title for a h#--></ol>
+
+        <ol class="centerbaseline"><label for="center">Nom complet du centre de services</label>
+        <input type="text" id="center_name" name="center_name" class="auto-fit-impot" required><br></ol>
+    </ul>
+
+     <ul><br><br>
+        <br><ol><label class="bolt">Votre école</label></ol>
+        <ol><p>Veuillez saisir les coordonnées de votre école:</p></ol>
+        <ol class="centerbaseline"><label for="school">Nom de l'école</label>
+        <input type="text" id="school" name="school" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="cybercap_code">Code école Cybercap</label>
+        <input type="text" id="cybercap_code" name="cybercap_code" class="auto-fit-impot" required><br><!-- ??? if need it--></ol>
+        <ol class="centerbaseline"><label for="street_number">Numéro civique et rue</label>
+        <input type="text" id="street_number" name="street_number" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="city_name">Ville</label>
+        <input type="text" id="city_name" name="city_name" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="postal_code">Code postal</label>
+        <input type="text" id="postal_code" name="postal_code" class="auto-fit-impot" required> <br></ol>
+    </ul>
+
+     <ul>
+        <br><ol><label class="bolt">Personne mandatée</label></ol>
+        <ol ><P>Veuillez saisir les coordonnées de la personne mandatée pour mettre en œuvres les activités de Relève numérique à votre école:</P></ol>
+        <ol class="centerbaseline"><label for="name">Prénom et nom</label>
+        <input type="text" id="name" name="name" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="fonction">Fonction</label>
+        <input type="text" id="fonction" name="fonction" class="auto-fit-impot" required><br></ol><!-- ??? if need it-->
+        <ol class="centerbaseline"><label for="courriel">Courriel</label>
+        <input type="text" id="courriel" name="courriel" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="primary_cell">Téléphone principal</label>
+        <input type="text" id="primary_cell" name="primary_cell" class="auto-fit-impot" required><br></ol>
+        <ol class="centerbaseline"><label for="secondary_cell">Téléphone secondaire</label>
+        <input type="text" id="secondary_cell" name="secondary_cell" class="auto-fit-impot" required><br></ol>
+    </ul>
+
+    <ul>
+        <ol><label class="bolt">Commentaires ou particularités à nous communiquer</label></ol>
+        <ol><label for="commentaire">Utilisez cette zone de texte pour tout commentaire ou particularité à nous communiquer concernant la planification des événements. Nous vous invitons à entrer en contact avec CyberCap pour toutes questions.</label>
+        <input type="text" id="commentaire" name="commentaire" class="auto-fit-impot" required></ol>
+    </ul>
+     <!-- Add more form fields as needed -->
+     
+ 
+ <p>Formulaire incomplet, veuillez compléter les informations demandées.</p>
+ 
+    <div id="myForm">
+    <div id="buttonContainer">
+        <button type="button"  id="prevBtnL" disabled>Previous</button>
+        <button type="button" onclick="nextStep(nextBtnR)" id="nextBtnR">Next</button>
+    </div></div>
+    </fieldset>
+ </form>
+
+ <script src="/js/button_light_dark.js"> </script>
+ <script src="/js/function.js"></script> 
+ <script src="/js/data_control.js"></script> 
+ 
+ <!--<script src="/public/js/button_light_dark.js"> </script>
+ <script src="/public/js/function.js"></script> -->
+</body>
+</html>
