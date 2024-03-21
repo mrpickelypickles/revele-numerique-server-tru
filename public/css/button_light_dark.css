@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+2&display=swap');
+
+body {
+  border: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #060508;
+  font-family: 'Baloo 2', cursive;
+}
+
+.button_light_dark {
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: 1%;
+}
+
+.button_light_dark h1{
+  font-size: 38px;
+  margin-right: 25px;
+}
+
+.dark-mode {
+  background-color: #000000d0;
+  color: #ffffff;
+}
+
+/* Button Switch */
+.btn-switch {
+  background-color: #27244F;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+
+.btn-switch:after {
+  content: '';
+  background-color: #dad7d7;
+  border-radius: 100px;
+  display: block;
+  width: 75px;
+  height: 72px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: unset;
+  transition: .3 ease all;
+ 
+}
+
+.btn-switch.active {
+  background-color: #A3A1BE;
+  color: #fff;
+}
+
+.btn-switch.active:after {
+  right: 0;
+  left: unset; 
+}
+
+.btn-switch > span {
+  width: 75px;
+  height: 70px;
+  line-height: 70px;
+  display: block;
+  background-color: none;
+  color: #000;
+}
+
+.btn-switch .light,
+.btn-switch .dark {
+  color: #fff;
+  font-size: 22px;
+}
